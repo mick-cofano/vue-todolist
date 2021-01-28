@@ -8,6 +8,18 @@
   <body>
 
 
+    <div id="app">
+
+      <input v-model.trim="currentItem" v-on:keyup.enter="addToList" placeholder="Inserisci qualcosa da comprare"></input>
+      <button @click="addToList">Invia</button>
+
+      <ul>
+        <li v-for="element in list">{{element}}</li>
+        <li></li>
+      </ul>
+
+    </div>
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
